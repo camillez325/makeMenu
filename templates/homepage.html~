@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 
 {% block homepage %}
-<div id="logo">
-  <span><em>Your Personal Menu</em></span>
-</div>
 <div class="row">
   <div class="category">
     <a href='{{ url_for('homepage') }}' class="special">Home</a>
