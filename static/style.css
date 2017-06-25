@@ -42,6 +42,13 @@ body, html {
 .item {
   font-weight: 200;
   margin:10px;
+  text-align: center;
+}
+
+.form-item {
+  font-weight: 100;
+  padding: 30px;
+  text-align: center;
 }
 
 .banner {
@@ -60,6 +67,17 @@ body, html {
   font-weight: 200;
   line-height: 0.8;
 
+}
+
+.button-background {
+ font-size: 18px;
+ padding:15px;
+ width: 16%;
+ display: inline-block;
+ background: black;
+ opacity: 0.8;
+ font-weight: 100;
+ color: floralwhite;
 }
 
 .middle {
@@ -105,6 +123,7 @@ textarea {
   width: 40em;
   height: 15em;
   white-space: pre-line;
+  background: floralwhite;
 }
 
 .flash {
@@ -115,15 +134,16 @@ textarea {
   margin: 0 auto;
 }
 
-.search {
+.footnote {
+  background: black;
+  opacity: 0.9;
+  padding: 15px;
   text-align: center;
-  padding: 30px;
-  background: url(Images/banner3.jpg) 0 0;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+  color: floralwhite;
 }
 
-.special {
-  font-weight: 300;
+#submit {
+  background: gray;
+  padding:7px;
+  color: floralwhite;
 }
