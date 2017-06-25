@@ -10,7 +10,7 @@
       {{ form.csrf_token }}
       {{ form.ingredients.label }}:<br>{{ form.ingredients() }}<br><br>
 
-      <button type="button" style="background:gray;padding:7px;"><a href='{{ url_for('homepage') }}' style="color:floralwhite;">Cancel</a></button>
+      <button type="button" style="background:black;padding:10px 15px 10px 15px;border:black;opacity:0.8;"><a href='{{ url_for('homepage') }}' style="color:floralwhite;">Cancel</a></button>
       {{ form.submit }}
       {% with messages = get_flashed_messages() %}
         {% if messages %}
