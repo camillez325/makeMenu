@@ -57,6 +57,7 @@ body, html {
   background-attachment: fixed;
   background-size: cover;
   padding: 180px;
+  text-align: center;
 }
 
 #logo{
@@ -120,8 +121,11 @@ a:hover, button:hover {
 }
 
 textarea {
+  font-size: 18px;
+  font-family:Lato;
+  font-weight:300;
   width: 70%;
-  height: 20em;
+  height: 10em;
   white-space: pre-line;
   background: floralwhite;
 }
@@ -152,4 +156,53 @@ textarea {
 }
 i.fa-heart{
   color:#F8230C;
+}
+
+.prompt h1 {
+  background:floralwhite;
+  line-height: 1.5em;
+  margin-left: 300px;
+  margin-right: 300px;
+  opacity: 0.8;
+}
+
+.prompt h2{
+  font-weight: 300;
+}
+
+.prompt a {
+  font-weight: 300;
+}
+
+.no-lack {
+  background:floralwhite;
+  padding: 5px 20px 20px 20px;
+  opacity: 0.8;
+  font-weight: 300;
+}
+.lack {
+  background:floralwhite;
+  padding: 5px 20px 40px 20px;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+table,th,td {
+  border: 1px solid black;
+  font-weight: 300;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+th {
+  height: 40px;
+}
+tr:hover {
+  background: #ffbcaf;
 }

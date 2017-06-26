@@ -2,37 +2,42 @@
 {% extends 'base.html' %}
 
 {% block prompt %}
-<h1>Recipes</h1>
-<br>
-{% if recipe_list %}
-  <h2>Recipes that you are ready for</h2>
-{% endif %}
-    {% for recipe in recipe_list %}
-      <a href='{{ url_for('ingredients_of_recipe', recipe_name=recipe) }}'>{{ recipe }}</a>
-      <br>
-    {% endfor %}
-
-<h2>Recipes that lack some ingredients</h2>
-
-  <table style="width:50%">
-    <tr>
-      <th>Recipe</th>
-      <th>Missing Ingredients</th>
-    </tr>
-    {% for key,value in incomplete_recipe_list.iteritems() %}
-    <tr>       
-      <th>
-        <a href='{{ url_for('ingredients_of_recipe', recipe_name=recipe) }}'>{{ key }}</a>
-      </th>
-      <th>
-         {% for missing_ingredient in value %}
-     		{{ missing_ingredient }}
-     		 <br>
-   	 {% endfor %}
-      </th>
-      <br>
-    </tr>
-    {% endfor %}
-  </table>
-
+<section class="banner">
+  <section class="prompt">
+    <h1>RECIPES</h1>
+    <br>
+      {% if recipe_list %}
+      <section class="no-lack">
+        <h2>Recipes that You Are Ready For</h2>
+      {% endif %}
+          {% for recipe in recipe_list %}
+            <a href='{{ url_for('ingredients_of_recipe', recipe_name=recipe) }}'>{{ recipe }}</a>
+            <br>
+          {% endfor %}
+    </section>
+    <br>
+    <section class="lack">
+      <h2>Recipes that Need More Ingredients</h2>
+      <table class="table">
+        <tr class="header">
+          <th style="font-weight:300;">Recipe</th>
+          <th style="font-weight:300;">Missing Ingredients</th>
+        </tr>
+        {% for key,value in incomplete_recipe_list.iteritems() %}
+        <tr>       
+          <td>
+            <a href='{{ url_for('ingredients_of_recipe', recipe_name=recipe) }}'>{{ key }}</a>
+          </td>
+          <td>
+             {% for missing_ingredient in value %}
+         		{{ missing_ingredient }}
+         		 <br>
+       	 {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </section>
+  </section>
+</section>
 {% endblock %}
